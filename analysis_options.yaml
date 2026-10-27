@@ -1,0 +1,15 @@
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_empty_else
+    - avoid_relative_lib_imports
+    - curly_braces_in_flow_control_structures
+    - prefer_final_locals
+    - prefer_single_quotes
+    - unnecessary_lambdas
