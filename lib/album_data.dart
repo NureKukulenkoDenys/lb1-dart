@@ -1,7 +1,4 @@
-/// Демонстраційні (вигадані) дані для каталогу. Формат:
-/// виконавець;назва;рік;лейбл;кількість_треків;тривалість_хв;дата;код.
-///
-/// 20 коректних та 5 навмисно некоректних рядків.
+
 const List<String> rawAlbumLines = <String>[
   'Nova Echo;Skyline Drift;2003;Aurora Records;12;48;2003-04-15;ALB-0001',
   'Pixel Tide;Neon Seasons;2015;Blue Moon;10;42;2015-09-18;ALB-0002',
@@ -23,14 +20,9 @@ const List<String> rawAlbumLines = <String>[
   'Silver Avenue;Bright City;2018;Aurora Records;10;40;2018-01-26;ALB-0018',
   'Amber Circuit;Deep Blue;2009;North Wave;12;47;2009-03-13;ALB-0019',
   'Orbit Kids;Tomorrow Is Here;2025;Orbit Sound;10;39;2025-06-06;ALB-0020',
-  // Помилка 1: відсутній восьмий стовпець (код).
   'Broken Notes;No Catalog Code;2018;Blue Moon;9;39;2018-10-01',
-  // Помилка 2: нечисловий рік випуску.
   'Broken Notes;No Numeric Year;twenty;North Wave;8;33;2020-05-14;ALB-0022',
-  // Помилка 3: неіснуюча дата (DateTime.tryParse нормалізує переповнення).
   'Broken Notes;Invalid February;2024;Aurora Records;10;41;2024-02-30;ALB-0023',
-  // Помилка 4: кількість треків поза допустимим діапазоном.
   'Broken Notes;Zero Tracks;2021;Orbit Sound;0;44;2021-07-01;ALB-0024',
-  // Помилка 5: код не відповідає формату ALB-0000.
   'Broken Notes;Wrong Code;2020;Blue Moon;9;35;2020-08-08;CD-0025',
 ];
