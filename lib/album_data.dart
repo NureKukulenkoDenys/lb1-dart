@@ -1,4 +1,3 @@
-
 const List<String> rawAlbumLines = <String>[
   'Nova Echo;Skyline Drift;2003;Aurora Records;12;48;2003-04-15;ALB-0001',
   'Pixel Tide;Neon Seasons;2015;Blue Moon;10;42;2015-09-18;ALB-0002',

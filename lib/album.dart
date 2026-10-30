@@ -1,4 +1,3 @@
-
 typedef Album = ({
   String artist,
   String title,
