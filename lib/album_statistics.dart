@@ -3,7 +3,6 @@ import 'album.dart';
 List<Album> releasedSince(Iterable<Album> albums, int year) {
   return albums.where((Album album) => album.year >= year).toList();
 }
-
 List<String> albumCaptions(Iterable<Album> albums) {
   return albums
       .map((Album album) => '${album.artist} — ${album.title}')

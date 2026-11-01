@@ -1,4 +1,5 @@
 import 'album.dart';
+import 'album_utils.dart';
 
 DateTime? parseIsoDate(String text) {
   if (!RegExp(r'^\d{4}-\d{2}-\d{2}$').hasMatch(text)) {
@@ -83,8 +84,8 @@ List<String> validateAlbum(Album album, {DateTime? asOf}) {
   if (released.isAfter(today)) {
     issues.add('Дата випуску не може бути в майбутньому.');
   }
-  if (album.catalogCode.isEmpty) {
-    issues.add('Відсутній каталожний код.');
+  if (!validCatalogCode(album.catalogCode)) {
+    issues.add('Код має відповідати формату ALB-0000.');
   }
   return issues;
 }
