@@ -13,8 +13,11 @@ String maskCatalogCode(String code) {
   final RegExp maskPattern = RegExp(
     r'^(?<prefix>ALB-)(?<secret>\d{2})(?<visible>\d{2})$',
   );
+
   return code.replaceAllMapped(maskPattern, (Match match) {
-    return '${match.namedGroup('prefix')}**${match.namedGroup('visible')}';
+    final RegExpMatch regexMatch = match as RegExpMatch;
+
+    return '${regexMatch.namedGroup('prefix')}**${regexMatch.namedGroup('visible')}';
   });
 }
 
